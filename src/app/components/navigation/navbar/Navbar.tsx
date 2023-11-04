@@ -14,7 +14,7 @@ const Navbar = () => {
         width={205}
         height={75}
         className='cursor-pointer'
-        alt="mads navbar logo"
+        alt="mads navbar logo cute"
         />
         <div>right side</div>
       </div>
