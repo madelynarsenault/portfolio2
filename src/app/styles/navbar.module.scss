@@ -1,0 +1,32 @@
+.navMainDiv{
+    @apply hidden sm:flex
+}
+
+.navbar{
+    @apply fixed w-full h-24 shadow-xl bg-transparent
+}
+
+.navlogo{
+   @apply flex justify-between items-center h-full w-full px-4
+
+}
+
+.navUnordered{
+@apply hidden sm:flex
+}
+
+.navLists{
+    @apply mr-10 uppercase hover:border-b text-lg
+}
+
+.navHamburgerButton{
+   @apply sm:hidden cursor-pointer pl-24
+}
+
+.navOpenHamburger{
+    @apply fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-blue-400 p-10 ease-in duration-500
+}
+
+.navClosedHamburger{
+    @apply fixed left-[-100] top-0 p-10 sm:hidden
+}
