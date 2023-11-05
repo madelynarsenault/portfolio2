@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <main>
       <Navbar/>
-      <h1>Contact page</h1>
+      <h1>Contact page ya</h1>
       </main>
   )
 }
