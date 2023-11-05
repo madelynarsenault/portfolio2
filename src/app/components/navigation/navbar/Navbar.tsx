@@ -14,7 +14,6 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const handleNav = () => {
-    console.log('handlenav', menuOpen)
     setMenuOpen(!menuOpen)
   }
 
