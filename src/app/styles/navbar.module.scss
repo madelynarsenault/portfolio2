@@ -16,7 +16,11 @@
 }
 
 .navLists{
-    @apply mr-10 uppercase hover:border-b text-lg
+    @apply mr-10 uppercase hover:border-b text-lg 
+}
+
+.navListsMobile{
+    @apply uppercase hover:border-b text-lg mb-10
 }
 
 .navHamburgerButton{
@@ -24,9 +28,27 @@
 }
 
 .navOpenHamburger{
-    @apply fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-blue-400 p-10 ease-in duration-500
+    @apply fixed left-0 top-0 w-[100%] sm:hidden h-screen bg-slate-50 p-10 ease-in duration-300
 }
 
 .navClosedHamburger{
     @apply fixed left-[-100] top-0 p-10 sm:hidden
+}
+
+.navMobileMenu{
+    @apply flex w-full items-center justify-end
+}
+
+.navMobileMenuItemsDiv{
+    @apply py-4 justify-center
+}
+
+.navMobileSocialIcons{
+   @apply flex flex-row justify-around 
+}
+.navMobileUnordered{
+    @apply flex flex-col items-center py-4
+}
+.madsIcon{
+    @apply flex justify-center
 }
