@@ -1,36 +1,48 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Madsokami from '@/app/logos/Madsokami.png'
 import styles from '@/app/styles/navbar.module.scss'
 import Link from 'next/link'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import {BsGithub, BsLinkedin} from 'react-icons/bs'
+import {BsGithub, BsLinkedin, BsFillMoonStarsFill} from 'react-icons/bs'
 import {MdEmail} from 'react-icons/md'
 import { useState } from 'react'
 
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [color, setColor] = useState('transparent')
+  const [textColor, setTextColor] = useState('white')
+
 
   const handleNav = () => {
     setMenuOpen(!menuOpen)
   }
 
+  useEffect(() => {
+    const changeColor = () => {
+      if(window.scrollY >= 90){
+        setColor('#ffffff')
+        setTextColor('#000000')
+      } else {
+        setColor('transparent')
+        setTextColor('#ffffff')
+      }
+    }
+    window.addEventListener('scroll', changeColor)
+  }, []) 
+
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navlogo}>
+      <div style={{backgroundColor: `${color}`}} className={styles.navlogo}>
         <Link href='/'>
-        <Image 
-        src={Madsokami}
-        width={205}
-        height={75}
-        className='cursor-pointer'
-        alt="mads navbar logo cute"
-        />
+       <h1 style={{color: `${textColor}`}} className={styles.navListsMadsTitle}>Madsokami</h1>
         </Link>
         <div className={styles.navMainDiv}>
-          <ul className={styles.navUnordered}>
+          <ul style={{color: `${textColor}`}}className={styles.navUnordered}>
+          <BsFillMoonStarsFill className={styles.navLists} size={25} onClick={() => setDarkMode(!darkMode)} />
             <Link href='/About' className={styles.navLists}>
             <li>About Me</li>
             </Link>
@@ -43,9 +55,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div onClick={() => handleNav()} className={styles.navHamburgerButton}>
-          {!menuOpen ? <AiOutlineMenu size={37} />
+          {!menuOpen ? <AiOutlineMenu size={37} style={{color: `${textColor}`}}/>
            :
-           <AiOutlineClose size={37} />
+           <AiOutlineClose size={37} style={{color: `${textColor}`}}/>
           }
         </div>
       </div>

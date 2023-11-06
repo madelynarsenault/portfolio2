@@ -1,14 +1,13 @@
 .navMainDiv{
-    @apply hidden sm:flex
+    @apply hidden sm:flex text-white
 }
 
 .navbar{
-    @apply fixed w-full h-24 shadow-xl bg-transparent
+    @apply fixed w-full h-20
 }
 
 .navlogo{
-   @apply flex justify-between items-center h-full w-full px-4
-
+   @apply flex justify-between items-center h-full w-full px-4 
 }
 
 .navUnordered{
@@ -16,7 +15,10 @@
 }
 
 .navLists{
-    @apply mr-10 uppercase hover:border-b text-lg 
+    @apply mr-10 uppercase hover:border-b text-lg  
+}
+.navListsMadsTitle{
+    @apply mr-10 uppercase hover:border-b text-2xl  font-bold
 }
 
 .navListsMobile{
@@ -24,7 +26,7 @@
 }
 
 .navHamburgerButton{
-   @apply sm:hidden cursor-pointer pl-24
+   @apply sm:hidden cursor-pointer pl-24 text-white
 }
 
 .navOpenHamburger{
