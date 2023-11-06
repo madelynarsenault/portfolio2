@@ -1,0 +1,19 @@
+.heroMainDiv{
+    @apply flex items-center justify-center h-screen mb-[10rem] bg-fixed bg-cover
+}
+
+.heroTextDiv{
+    @apply p-5 text-white mt-[-10rem]
+}
+
+.heroTitle{
+    @apply text-6xl font-sans font-bold
+}
+
+.heroPTag{
+    @apply py-5 text-xl
+}
+
+.heroContactButton{
+    @apply px-8 py-2 border
+}

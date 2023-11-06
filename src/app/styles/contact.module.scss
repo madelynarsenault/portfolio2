@@ -1,0 +1,20 @@
+.contactMainDiv{
+   @apply max-w-[1240px] m-auto p-4 h-screen
+}
+
+.contactTitle{
+    @apply text-2xl font-bold text-center p-4
+}
+.contactForm{
+    @apply max-w-[600px] m-auto
+}
+.contactInputDiv{
+    @apply grid grid-cols-2 gap-2
+}
+.contactInputs{
+    @apply border shadow-lg p-3 w-full my-2
+}
+
+.contactEmailButton{
+    @apply border shadow-lg p-3 w-full
+}
